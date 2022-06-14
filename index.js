@@ -3,9 +3,10 @@ const jwt = require('jsonwebtoken')
 
 // data to be encrypted
 const data = { 
-  client: '1', 
-  address: '0x8B3A08b22d25C60e4b2BfD984e331568ECa4C299', 
-  role: 'user' 
+  client_id: '1',
+  client_name: 'Client Name',
+  client_address: '0x8B3A08b22d25C60e4b2BfD984e331568ECa4C299', 
+  client_role: 'user' 
 }
 
 // function that encrypt data using jwt
