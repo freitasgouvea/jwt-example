@@ -18,6 +18,7 @@
   "homepage": "https://github.com/freitasgouvea/jwt-example#readme",
   "dependencies": {
     "dotenv": "^16.0.1",
+    "jose": "^4.8.1",
     "jsonwebtoken": "^8.5.1"
   }
 }

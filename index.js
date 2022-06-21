@@ -1,5 +1,6 @@
 require('dotenv').config()
 const jwt = require('jsonwebtoken')
+const jose = require('jose')
 
 // data to be encrypted
 const data = { 
@@ -32,4 +33,16 @@ function decrypt() {
   return decryptedData
 }
 
-console.log(decrypt())
+// function that call encrypt function and decrypt data using jose library
+async function decryptJose() {
+  const accessToken = encrypt()
+  // this jose method decrypts data
+  const decryptedData = jose.decodeJwt(
+    accessToken, 
+    process.env.SECRET_KEY, 
+    { algorithm: 'HS256'} 
+  )
+  return decryptedData
+}
+
+console.log(decryptJose())
